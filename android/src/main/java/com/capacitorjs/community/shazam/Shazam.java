@@ -4,8 +4,11 @@ import android.util.Log;
 
 public class Shazam {
 
-    public String echo(String value) {
-        Log.i("Echo", value);
-        return value;
+    public void startMatch() {
+        Log.e("startMatch not implemented");
+    }
+
+    public void stopMatch() {
+        Log.e("stopMatch not implemented");
     }
 }

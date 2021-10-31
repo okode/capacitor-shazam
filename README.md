@@ -13,22 +13,30 @@ npx cap sync
 
 <docgen-index>
 
-* [`echo(...)`](#echo)
+* [`startMatch()`](#startmatch)
+* [`stopMatch()`](#stopmatch)
 
 </docgen-index>
 
 <docgen-api>
 <!--Update the source file JSDoc comments and rerun docgen to update the docs below-->
 
-### echo(...)
+### startMatch()
 
 ```typescript
-echo(options: { value: string; }) => any
+startMatch() => any
 ```
 
-| Param         | Type                            |
-| ------------- | ------------------------------- |
-| **`options`** | <code>{ value: string; }</code> |
+**Returns:** <code>any</code>
+
+--------------------
+
+
+### stopMatch()
+
+```typescript
+stopMatch() => any
+```
 
 **Returns:** <code>any</code>
 

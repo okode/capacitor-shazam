@@ -6,17 +6,9 @@ import ShazamKit
     let session = SHSession()
     let audioEngine = AVAudioEngine()
     var lastMatchID = ""
-    
-    @objc public func echo(_ value: String) -> String {
-        print(value)
         
+    func startMatch() {
         session.delegate = self
-        startAnalysingAudio()
-        
-        return value
-    }
-    
-    func startAnalysingAudio() {
         let inputNode = audioEngine.inputNode
         let bus = 0
         inputNode.installTap(onBus: bus, bufferSize: 2048, format: inputNode.inputFormat(forBus: bus)) { (buffer: AVAudioPCMBuffer!, time: AVAudioTime!) -> Void in
@@ -27,7 +19,7 @@ import ShazamKit
         try! audioEngine.start()
     }
     
-    func stopAnalysingAudio() {
+    func stopMatch() {
         let inputNode = audioEngine.inputNode
         let bus = 0
         inputNode.removeTap(onBus: bus)

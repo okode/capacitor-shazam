@@ -9,9 +9,11 @@ const Shazam = core.registerPlugin('Shazam', {
 });
 
 class ShazamWeb extends core.WebPlugin {
-    async echo(options) {
-        console.log('ECHO', options);
-        return options;
+    async startMatch() {
+        console.error('startMatch not implemented');
+    }
+    async stopMatch() {
+        console.error('startMatch not implemented');
     }
 }
 

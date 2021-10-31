@@ -1,3 +1,10 @@
+export interface ShazamMatch {
+  id: string;
+  title: string;
+  artist: string;
+}
+
 export interface ShazamPlugin {
-  echo(options: { value: string }): Promise<{ value: string }>;
+  startMatch(): Promise<void>;
+  stopMatch(): Promise<void>;
 }

@@ -1,6 +1,5 @@
 package com.capacitorjs.community.shazam;
 
-import com.getcapacitor.JSObject;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
@@ -12,11 +11,14 @@ public class ShazamPlugin extends Plugin {
     private Shazam implementation = new Shazam();
 
     @PluginMethod
-    public void echo(PluginCall call) {
-        String value = call.getString("value");
+    public void startMatch(PluginCall call) {
+        implementation.startMatch();
+        call.resolve();
+    }
 
-        JSObject ret = new JSObject();
-        ret.put("value", implementation.echo(value));
-        call.resolve(ret);
+    @PluginMethod
+    public void stopMatch(PluginCall call) {
+        implementation.stopMatch();
+        call.resolve();
     }
 }

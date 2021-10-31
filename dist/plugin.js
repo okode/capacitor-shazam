@@ -6,9 +6,11 @@ var capacitorShazam = (function (exports, core) {
     });
 
     class ShazamWeb extends core.WebPlugin {
-        async echo(options) {
-            console.log('ECHO', options);
-            return options;
+        async startMatch() {
+            console.error('startMatch not implemented');
+        }
+        async stopMatch() {
+            console.error('startMatch not implemented');
         }
     }
 

@@ -6,20 +6,24 @@
     "tags": [],
     "methods": [
       {
-        "name": "echo",
-        "signature": "(options: { value: string; }) => any",
-        "parameters": [
-          {
-            "name": "options",
-            "docs": "",
-            "type": "{ value: string; }"
-          }
-        ],
+        "name": "startMatch",
+        "signature": "() => any",
+        "parameters": [],
         "returns": "any",
         "tags": [],
         "docs": "",
         "complexTypes": [],
-        "slug": "echo"
+        "slug": "startmatch"
+      },
+      {
+        "name": "stopMatch",
+        "signature": "() => any",
+        "parameters": [],
+        "returns": "any",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "stopmatch"
       }
     ],
     "properties": []
