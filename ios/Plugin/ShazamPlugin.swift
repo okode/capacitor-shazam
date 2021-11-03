@@ -49,6 +49,7 @@ public class ShazamPlugin: CAPPlugin, SHSessionDelegate {
            let subtitle = matchedItem.subtitle,
            let webURL = matchedItem.webURL,
            let releaseDate = matchedItem.songs[0].releaseDate,
+           let albumTitle = matchedItem.songs[0].albumTitle,
            let matchId = matchedItem.shazamID, matchId != lastMatchID {
             lastMatchID = matchId
             var data = [String: String]()
@@ -59,6 +60,7 @@ public class ShazamPlugin: CAPPlugin, SHSessionDelegate {
             data["subtitle"] = subtitle
             data["webURL"] = webURL.absoluteString
             data["releaseDate"] = releaseDate.ISO8601Format()
+            data["albumTitle"] = albumTitle
             self.notifyListeners("didFind", data: data)
         }
     }
