@@ -5,10 +5,10 @@ import android.util.Log;
 public class Shazam {
 
     public void startMatch() {
-        Log.e("startMatch not implemented");
+        Log.i("startMatch not implemented");
     }
 
     public void stopMatch() {
-        Log.e("stopMatch not implemented");
+        Log.i("stopMatch not implemented");
     }
 }
