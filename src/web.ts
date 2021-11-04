@@ -1,5 +1,5 @@
 import { WebPlugin } from '@capacitor/core';
-import type { ShazamPlugin } from './definitions';
+import type { CalendarEventOptions, ShazamPlugin } from './definitions';
 
 export class ShazamWeb extends WebPlugin implements ShazamPlugin {
   
@@ -11,7 +11,7 @@ export class ShazamWeb extends WebPlugin implements ShazamPlugin {
     console.error('startMatch not implemented');
   }
 
-  async createCalendarEvent(): Promise<void> {
+  async createCalendarEvent(_: CalendarEventOptions): Promise<void> {
     console.error('createCalendarEvent not implemented');
   }
 

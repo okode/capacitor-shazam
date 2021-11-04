@@ -6,7 +6,7 @@ export class ShazamWeb extends WebPlugin {
     async stopMatch() {
         console.error('startMatch not implemented');
     }
-    async createCalendarEvent() {
+    async createCalendarEvent(_) {
         console.error('createCalendarEvent not implemented');
     }
 }

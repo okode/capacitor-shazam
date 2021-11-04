@@ -27,17 +27,70 @@
       },
       {
         "name": "createCalendarEvent",
-        "signature": "() => any",
-        "parameters": [],
+        "signature": "(options: CalendarEventOptions) => any",
+        "parameters": [
+          {
+            "name": "options",
+            "docs": "",
+            "type": "CalendarEventOptions"
+          }
+        ],
         "returns": "any",
         "tags": [],
         "docs": "",
-        "complexTypes": [],
+        "complexTypes": [
+          "CalendarEventOptions"
+        ],
         "slug": "createcalendarevent"
       }
     ],
     "properties": []
   },
-  "interfaces": [],
+  "interfaces": [
+    {
+      "name": "CalendarEventOptions",
+      "slug": "calendareventoptions",
+      "docs": "",
+      "tags": [],
+      "methods": [],
+      "properties": [
+        {
+          "name": "title",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "location",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "notes",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "startDate",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        },
+        {
+          "name": "endDate",
+          "tags": [],
+          "docs": "",
+          "complexTypes": [],
+          "type": "string | undefined"
+        }
+      ]
+    }
+  ],
   "enums": []
 }

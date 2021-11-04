@@ -29,9 +29,12 @@ public class ShazamPlugin: CAPPlugin, SHSessionDelegate, EKEventEditViewDelegate
             DispatchQueue.main.async {
                 if (granted) && (error == nil) {
                     let event = EKEvent(eventStore: self.eventStore)
-                    event.title = "My Event Title"
-                    event.startDate = Date()
-                    event.endDate = Date()
+                    let iso8601Formatter = ISO8601DateFormatter()
+                    event.title = call.getString("title")
+                    event.location = call.getString("location")
+                    event.notes = call.getString("notes")
+                    event.startDate = iso8601Formatter.date(from: call.getString("startDate", ""))
+                    event.endDate = iso8601Formatter.date(from: call.getString("endDate", ""))
                     self.eventController.event = event
                     self.eventController.eventStore = self.eventStore
                     self.eventController.editViewDelegate = self

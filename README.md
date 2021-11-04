@@ -15,7 +15,8 @@ npx cap sync
 
 * [`startMatch()`](#startmatch)
 * [`stopMatch()`](#stopmatch)
-* [`createCalendarEvent()`](#createcalendarevent)
+* [`createCalendarEvent(...)`](#createcalendarevent)
+* [Interfaces](#interfaces)
 
 </docgen-index>
 
@@ -44,14 +45,32 @@ stopMatch() => any
 --------------------
 
 
-### createCalendarEvent()
+### createCalendarEvent(...)
 
 ```typescript
-createCalendarEvent() => any
+createCalendarEvent(options: CalendarEventOptions) => any
 ```
+
+| Param         | Type                                                                  |
+| ------------- | --------------------------------------------------------------------- |
+| **`options`** | <code><a href="#calendareventoptions">CalendarEventOptions</a></code> |
 
 **Returns:** <code>any</code>
 
 --------------------
+
+
+### Interfaces
+
+
+#### CalendarEventOptions
+
+| Prop            | Type                |
+| --------------- | ------------------- |
+| **`title`**     | <code>string</code> |
+| **`location`**  | <code>string</code> |
+| **`notes`**     | <code>string</code> |
+| **`startDate`** | <code>string</code> |
+| **`endDate`**   | <code>string</code> |
 
 </docgen-api>
