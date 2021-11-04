@@ -1,14 +1,18 @@
 import Foundation
 import Capacitor
 import ShazamKit
+import EventKit
+import EventKitUI
 
 @available(iOS 15.0, *)
 @objc(ShazamPlugin)
-public class ShazamPlugin: CAPPlugin, SHSessionDelegate {
-
+public class ShazamPlugin: CAPPlugin, SHSessionDelegate, EKEventEditViewDelegate {
+    
     let session = SHSession()
     let audioEngine = AVAudioEngine()
     var lastMatchID = ""
+    let eventStore = EKEventStore()
+    let eventController = EKEventEditViewController()
 
     @objc func startMatch(_ call: CAPPluginCall) {
         startMatchImpl()
@@ -21,7 +25,27 @@ public class ShazamPlugin: CAPPlugin, SHSessionDelegate {
     }
 
     @objc func createCalendarEvent(_ call: CAPPluginCall) {
+        eventStore.requestAccess( to: EKEntityType.event, completion:{(granted, error) in
+            DispatchQueue.main.async {
+                if (granted) && (error == nil) {
+                    let event = EKEvent(eventStore: self.eventStore)
+                    event.title = "My Event Title"
+                    event.startDate = Date()
+                    event.endDate = Date()
+                    self.eventController.event = event
+                    self.eventController.eventStore = self.eventStore
+                    self.eventController.editViewDelegate = self
+                    DispatchQueue.main.async {
+                        self.bridge?.viewController?.present(self.eventController, animated: true, completion: nil)
+                    }
+                }
+            }
+        })
         call.resolve()
+    }
+    
+    public func eventEditViewController(_ controller: EKEventEditViewController, didCompleteWith action: EKEventEditViewAction) {
+        self.eventController.dismiss(animated: true, completion: nil)
     }
     
     func startMatchImpl() {
