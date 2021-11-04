@@ -12,6 +12,9 @@ var capacitorShazam = (function (exports, core) {
         async stopMatch() {
             console.error('startMatch not implemented');
         }
+        async createCalendarEvent() {
+            console.error('createCalendarEvent not implemented');
+        }
     }
 
     var web = /*#__PURE__*/Object.freeze({

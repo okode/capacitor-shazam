@@ -24,6 +24,16 @@
         "docs": "",
         "complexTypes": [],
         "slug": "stopmatch"
+      },
+      {
+        "name": "createCalendarEvent",
+        "signature": "() => any",
+        "parameters": [],
+        "returns": "any",
+        "tags": [],
+        "docs": "",
+        "complexTypes": [],
+        "slug": "createcalendarevent"
       }
     ],
     "properties": []

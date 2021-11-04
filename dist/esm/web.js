@@ -6,5 +6,8 @@ export class ShazamWeb extends WebPlugin {
     async stopMatch() {
         console.error('startMatch not implemented');
     }
+    async createCalendarEvent() {
+        console.error('createCalendarEvent not implemented');
+    }
 }
 //# sourceMappingURL=web.js.map

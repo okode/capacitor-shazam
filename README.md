@@ -15,6 +15,7 @@ npx cap sync
 
 * [`startMatch()`](#startmatch)
 * [`stopMatch()`](#stopmatch)
+* [`createCalendarEvent()`](#createcalendarevent)
 
 </docgen-index>
 
@@ -36,6 +37,17 @@ startMatch() => any
 
 ```typescript
 stopMatch() => any
+```
+
+**Returns:** <code>any</code>
+
+--------------------
+
+
+### createCalendarEvent()
+
+```typescript
+createCalendarEvent() => any
 ```
 
 **Returns:** <code>any</code>
