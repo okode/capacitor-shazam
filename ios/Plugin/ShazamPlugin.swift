@@ -19,6 +19,10 @@ public class ShazamPlugin: CAPPlugin, SHSessionDelegate {
         stopMatchImpl()
         call.resolve()
     }
+
+    @objc func createCalendarEvent(_ call: CAPPluginCall) {
+        call.resolve()
+    }
     
     func startMatchImpl() {
         session.delegate = self

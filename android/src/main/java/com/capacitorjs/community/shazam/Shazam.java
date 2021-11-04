@@ -11,4 +11,9 @@ public class Shazam {
     public void stopMatch() {
         Log.i("Shazam", "stopMatch not implemented");
     }
+
+    public void createCalendarEvent() {
+        Log.i("Shazam", "createCalendarEvent not implemented");
+    }
+
 }

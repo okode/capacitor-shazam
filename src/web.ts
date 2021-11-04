@@ -11,4 +11,8 @@ export class ShazamWeb extends WebPlugin implements ShazamPlugin {
     console.error('startMatch not implemented');
   }
 
+  async createCalendarEvent(): Promise<void> {
+    console.error('createCalendarEvent not implemented');
+  }
+
 }

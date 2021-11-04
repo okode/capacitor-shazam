@@ -21,4 +21,10 @@ public class ShazamPlugin extends Plugin {
         implementation.stopMatch();
         call.resolve();
     }
+
+    @PluginMethod
+    public void createCalendarEvent(PluginCall call) {
+        call.resolve();
+    }
+
 }
