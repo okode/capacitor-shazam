@@ -26,10 +26,8 @@ npx cap sync
 ### startMatch()
 
 ```typescript
-startMatch() => any
+startMatch() => Promise<void>
 ```
-
-**Returns:** <code>any</code>
 
 --------------------
 
@@ -37,10 +35,8 @@ startMatch() => any
 ### stopMatch()
 
 ```typescript
-stopMatch() => any
+stopMatch() => Promise<void>
 ```
-
-**Returns:** <code>any</code>
 
 --------------------
 
@@ -48,14 +44,12 @@ stopMatch() => any
 ### createCalendarEvent(...)
 
 ```typescript
-createCalendarEvent(options: CalendarEventOptions) => any
+createCalendarEvent(options: CalendarEventOptions) => Promise<void>
 ```
 
 | Param         | Type                                                                  |
 | ------------- | --------------------------------------------------------------------- |
 | **`options`** | <code><a href="#calendareventoptions">CalendarEventOptions</a></code> |
-
-**Returns:** <code>any</code>
 
 --------------------
 

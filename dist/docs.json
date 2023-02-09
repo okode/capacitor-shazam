@@ -7,9 +7,9 @@
     "methods": [
       {
         "name": "startMatch",
-        "signature": "() => any",
+        "signature": "() => Promise<void>",
         "parameters": [],
-        "returns": "any",
+        "returns": "Promise<void>",
         "tags": [],
         "docs": "",
         "complexTypes": [],
@@ -17,9 +17,9 @@
       },
       {
         "name": "stopMatch",
-        "signature": "() => any",
+        "signature": "() => Promise<void>",
         "parameters": [],
-        "returns": "any",
+        "returns": "Promise<void>",
         "tags": [],
         "docs": "",
         "complexTypes": [],
@@ -27,7 +27,7 @@
       },
       {
         "name": "createCalendarEvent",
-        "signature": "(options: CalendarEventOptions) => any",
+        "signature": "(options: CalendarEventOptions) => Promise<void>",
         "parameters": [
           {
             "name": "options",
@@ -35,7 +35,7 @@
             "type": "CalendarEventOptions"
           }
         ],
-        "returns": "any",
+        "returns": "Promise<void>",
         "tags": [],
         "docs": "",
         "complexTypes": [
